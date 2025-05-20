@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken'
 import appointmentModel from "../models/appointmentModel.js";
 
 const changeAvailablity = async (req, res) => {
-
     try {
 
         const { docId } = req
