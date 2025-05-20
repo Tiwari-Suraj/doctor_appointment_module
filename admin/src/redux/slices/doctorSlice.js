@@ -2,7 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const backendUrl = import.meta.env.VITE_API_URL;
+// const backendUrl = import.meta.env.VITE_API_URL;
+
+const backendUrl = "https://doctor-appointment-module.onrender.com" || import.meta.env.VITE_API_URL;
+
 
 // Async Thunks
 export const getAppointments = createAsyncThunk(
@@ -59,7 +62,7 @@ export const getProfileData = createAsyncThunk(
 const doctorSlice = createSlice({
   name: "doctor",
   initialState: {
-    dToken : localStorage.getItem("dToken") || null,
+    dToken: localStorage.getItem("dToken") || null,
     appointments: [],
     dashData: null,
     profileData: null,

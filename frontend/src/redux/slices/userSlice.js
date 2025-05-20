@@ -2,7 +2,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+// const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+const backendUrl = "https://doctor-appointment-module.onrender.com" || import.meta.env.VITE_API_URL;
 
 const initialToken = localStorage.getItem("token");
 

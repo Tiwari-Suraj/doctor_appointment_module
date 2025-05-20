@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const backendURL = import.meta.env.VITE_API_URL;
+const backendURL = "https://doctor-appointment-module.onrender.com" || import.meta.env.VITE_API_URL;
 
 // Thunks
 export const getAllDoctors = createAsyncThunk(
