@@ -7,7 +7,7 @@ const changeAvailablity = async (req, res) => {
 
     try {
 
-        const { docId } = req.body
+        const { docId } = req
         const docData = await doctorModel.findById(docId)
         await doctorModel.findByIdAndUpdate(docId, { available: !docData.available })
         res.json({ success: true, message: 'Availablity Changed' })
@@ -123,7 +123,7 @@ const doctorProfile = async (req, res) => {
     try {
 
         const { docId } = req;
-        console.log({docId});
+        console.log({ docId });
         const profileData = await doctorModel.findById({ _id: docId }).select('-password');
         res.json({ success: true, profileData });
 
